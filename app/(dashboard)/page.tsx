@@ -1,5 +1,10 @@
-const DashboardPage = () => {
-  return <p className="text-white bg-white">hello world</p>;
-};
 
-export default DashboardPage;
+const page = () => {
+  return (
+    <div>
+      hello Dashbaord Page
+    </div>
+  )
+}
+
+export default page
