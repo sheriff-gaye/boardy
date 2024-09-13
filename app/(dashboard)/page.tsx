@@ -1,10 +1,11 @@
+"use client"
 
-const page = () => {
-  return (
+
+export  default function Home() {
+  return(
     <div>
-      hello Dashbaord Page
+     <p>home page</p>
     </div>
   )
-}
+};
 
-export default page
