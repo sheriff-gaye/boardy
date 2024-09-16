@@ -8,7 +8,7 @@ interface DashbaordLayoutProps {
 const DashbaordLayout = ({ children }: DashbaordLayoutProps) => {
   return (
     <main className="h-full">
-      <Sidebar />
+       <Sidebar /> 
       <div className="pl-[60px] h-full ">
         <div className="flex gap-x-3 h-full ">
           <OrgSidebar />
@@ -17,7 +17,7 @@ const DashbaordLayout = ({ children }: DashbaordLayoutProps) => {
             {children}
           </div>
         </div>
-      </div>
+      </div> 
     </main>
   );
 };

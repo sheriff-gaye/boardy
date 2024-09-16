@@ -1,11 +1,11 @@
-"use client"
+"use client";
 
-
-export  default function Home() {
-  return(
+const Home = () => {
+  return (
     <div>
-     <p>home page</p>
+      <p>home page</p>
     </div>
-  )
+  );
 };
 
+export default Home;
