@@ -18,7 +18,7 @@ const DashbaordLayout = ({ children }: DashbaordLayoutProps) => {
           </div>
         </div>
       </div> 
-    </main>
+    </main> 
   );
 };
 

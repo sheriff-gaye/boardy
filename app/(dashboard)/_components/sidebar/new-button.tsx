@@ -1,15 +1,18 @@
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Plus } from "lucide-react";
 import { CreateOrganization } from "@clerk/nextjs";
+import Hint from "@/components/hint";
 
 const NewButton = () => {
   return (
     <Dialog>
       <DialogTrigger asChild>
         <div className="aspect-square">
+          <Hint label="Create Oragnization" side="right" align="start"  sideOffSet={18}>
           <button className="h-full w-full rounded-md bg-white/25 flex justify-center items-center opacity-60 hover:opacity-100 transition">
             <Plus className="text-white" />
           </button>
+          </Hint>
         </div>
       </DialogTrigger>
       <DialogContent className="p-0  border-none max-w-[480px]">
