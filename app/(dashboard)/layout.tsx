@@ -7,18 +7,17 @@ interface DashbaordLayoutProps {
 }
 const DashbaordLayout = ({ children }: DashbaordLayoutProps) => {
   return (
-    <main className="h-full">
-       <Sidebar /> 
-      <div className="pl-[60px] h-full ">
-        <div className="flex gap-x-3 h-full ">
-          <OrgSidebar />
-          <div className="h-full flex-1">
-            <Navbar />
-            {children}
-          </div>
+    <main className="h-screen flex">
+      <Sidebar />
+      <div className="pl-[60px] flex-1 flex h-screen">
+        <OrgSidebar customclass="h-full" />
+        <div className="flex-1 flex flex-col h-full">
+          <Navbar />
+
+          <div className="flex-1 overflow-auto">{children}</div>
         </div>
-      </div> 
-    </main> 
+      </div>
+    </main>
   );
 };
 
