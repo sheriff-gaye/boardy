@@ -1,6 +1,6 @@
 "use client";
 
-import { useOrganization } from "@clerk/nextjs";
+import { SignInButton, useOrganization } from "@clerk/nextjs";
 import EmptyOrg from "./_components/empty-org";
 import BoardList from "./_components/board-list";
 
@@ -21,6 +21,8 @@ const Home = ({searchParams}:DashbaordProps) => {
       ) : (
         <BoardList orgId={organization?.id} query={searchParams}/>
       )}
+   
+   <SignInButton/>
     </div>
   );
 };

@@ -27,7 +27,7 @@ const OrgSidebar = ({customclass}:Props) => {
        <Link href="/">
         <div className=" flex items-center gap-x-2">
           <Image src="/logo.svg" alt="logo" height={60} width={60} />
-          <span className={cn("font-semibold text-2xl", font.className)}>
+          <span className={cn("font-semibold text-2xl text-black", font.className)}>
             Boardy
           </span>
         </div>
@@ -58,7 +58,7 @@ const OrgSidebar = ({customclass}:Props) => {
           asChild
           variant={favorites ?"ghost":"secondary"}
           size="lg"
-          className="font-normal justify-start px-2  w-full"
+          className="font-normal justify-start px-2  w-full text-black"
         >
           <Link href="/">
             <LayoutDashboard className="mr-2 h-4 w-4" />
@@ -70,7 +70,7 @@ const OrgSidebar = ({customclass}:Props) => {
           asChild
           size="lg"
           variant={favorites ?"secondary":"ghost"}
-          className="font-normal justify-start px-2  w-full"
+          className="font-normal justify-start px-2  w-full text-black"
         >
           <Link
             href={{

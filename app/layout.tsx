@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { ConvexClientProvider } from "@/providers/convex-client-provider";
+import { Toaster } from "@/components/ui/sonner";
+import { ModalProvider } from "@/providers/modal-provider";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -14,8 +16,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="">
-        <ConvexClientProvider>{children}</ConvexClientProvider>
+      <body className="bg-white">
+        <ConvexClientProvider>
+          {children}
+          <ModalProvider />
+          <Toaster richColors />
+        </ConvexClientProvider>
       </body>
     </html>
   );

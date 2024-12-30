@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { useOrganization } from "@clerk/nextjs";
 import { useApiMutation } from "@/hooks/use-api-mutation";
+import { toast } from "sonner";
 
 const EmptyBoard = () => {
   const { organization } = useOrganization();
@@ -16,6 +17,11 @@ const EmptyBoard = () => {
     mutate({
       orgId: organization?.id,
       title: "Untitle"
+    }).then(()=>{
+      toast.success("Board Created")
+      //rediret to  its Id
+    }).catch(()=>{
+      toast.error("Failed to create board")
     });
   };
   return (

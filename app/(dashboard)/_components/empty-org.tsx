@@ -5,8 +5,8 @@ import Image from "next/image";
 
 const EmptyOrg = () => {
   return (
-    <div className="flex flex-col items-center justify-center h-full">
-      <Image src="/element.svg" alt="logo" height={200} width={200} />
+    <div className="flex flex-col items-center justify-center h-full text-black">
+      <Image src="/elements.svg" alt="logo" height={200} width={200} />
       <h2 className="text-2xl  font-semibold mt-6">Welcome to Boardy</h2>
       <p className="text-muted-foreground text-sm mt-2">
         Create an Organization to get Started
@@ -21,6 +21,7 @@ const EmptyOrg = () => {
           </DialogContent>
         </Dialog>
       </div>
+     
     </div>
   );
 };

@@ -3,7 +3,7 @@ import Image from "next/image"
 const EmptySearch=()=>{
 
     return(
-        <div className="flex flex-col items-center justify-center h-full">
+        <div className="flex flex-col items-center justify-center h-full text-black">
             <Image src="/empty-search.svg"  height={140} width={140} alt="empty"/>
             <h2 className="text-2xl font-semibold mt-6">No Result Found</h2>
             <p className="text-muted-foreground text-sm mt-2">
