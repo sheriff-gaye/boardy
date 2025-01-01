@@ -33,7 +33,6 @@ export const create = mutation({
 
     const randomImages = images[Math.floor(Math.random() * images.length)]
 
-    console.log("Test", randomImages);
 
     const board = await ctx.db.insert("board", {
       title: args.title,
@@ -156,7 +155,7 @@ export const favorite = mutation({
 
 
 export const unfavorite = mutation({
-  args: { id: v.id("board") },
+  args: { id: v.id("board") }, // Only requires the board ID
   handler: async (ctx, args) => {
     const identity = await ctx.auth.getUserIdentity();
 
@@ -175,16 +174,18 @@ export const unfavorite = mutation({
     const existingFavorite = await ctx.db
       .query("userFavorites")
       .withIndex("by_user_board", (q) =>
-        q.eq("userId", userId).eq("boardId", board._id)
+        q
+          .eq("userId", userId)
+          .eq("boardId", board._id)
       )
       .unique();
 
     if (!existingFavorite) {
-      throw new Error("Favorited board not found");
+      throw new Error("Favorite not found for this board");
     }
 
-    await ctx.db.delete(existingFavorite._id);
+    await ctx.db.delete(existingFavorite._id); // Delete the favorite
 
-    return board;
+    return board; // Optionally return the board details
   },
 });

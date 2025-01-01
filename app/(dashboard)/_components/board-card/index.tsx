@@ -50,7 +50,7 @@ const BoardCard = ({
 
   const ToggleFavorite = () => {
     if(isFavories){
-      UnFavorite({id})
+      UnFavorite({id,orgId})
       .catch(()=> toast.error("Failed to unfavourite"))
     }else{
       onFavorite({id, orgId})

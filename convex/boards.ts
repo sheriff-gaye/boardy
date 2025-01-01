@@ -35,6 +35,7 @@ export const qet = query({
             return boards.map((board) => ({
               ...board,
               isFavorite: true,
+              imageUrl: board.imageUrl || "",
             }));
           }
       
@@ -63,7 +64,7 @@ export const qet = query({
             )
                 .unique()
                 .then((favorite) => {
-                    return { ...board, isFavorite: !!favorite, }
+                    return { ...board, isFavorite: !!favorite,imageUrl: board.imageUrl || "",}
                 })
 
         }

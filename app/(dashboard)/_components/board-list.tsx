@@ -64,7 +64,7 @@ const BoardList = ({ orgId, query }: BoardListProps) => {
             id={board._id}
             authorId={board.authorId}
             title={board.title}
-            imageUrl={board.imageUrl}
+            imageUrl={board?.imageUrl}
             authorName={board.authorName}
             createdAt={board._creationTime}
             orgId={board.orgId}
